@@ -96,12 +96,9 @@
       <h2>Get updates as the paper develops and vote on consensus.</h2>
     </div>
     <div class="reveal">
-      <p class="sub">A short newsletter for the community — new documents, milestones, and ways to contribute as a co-author or signatory. A few emails a year, nothing more.</p>
-      <form class="signup-form" id="signupForm" data-form-url="{{ $signup }}" data-contact="{{ .Site.Params.contactEmail }}">
-        <input type="email" placeholder="you@institution.edu" aria-label="Email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="signup-note" id="signupNote">For scientists, press, and anyone following the warning.</div>
+      <p class="sub">A short newsletter for the community — new documents, milestones, and invitations to vote in our consensus polls. A few emails a year, nothing more.</p>
+      <a class="signup-btn" href="{{ $signupHref }}"{{ if ne $signup "" }} target="_blank" rel="noopener"{{ end }}>Subscribe <span class="arr">→</span></a>
+      <div class="signup-note">Opens our sign-up form — name, email, affiliation, and role. For scientists, press, and anyone following the warning.</div>
     </div>
   </div>
 </section>

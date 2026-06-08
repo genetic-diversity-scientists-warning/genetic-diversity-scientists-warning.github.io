@@ -109,6 +109,10 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 .signup-form input:focus{outline:none;border-color:oklch(0.82 0.1 55)}
 .signup-form button{font-family:var(--sans);font-weight:600;font-size:16px;padding:15px 26px;border-radius:var(--r);border:none;background:oklch(0.96 0.02 60);color:var(--clay-deep);cursor:pointer;transition:.18s;white-space:nowrap}
 .signup-form button:hover{background:#fff}
+.signup-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:16px;padding:15px 28px;border-radius:var(--r);background:oklch(0.96 0.02 60);color:var(--clay-deep);transition:.18s;margin-top:24px}
+.signup-btn:hover{background:#fff;color:var(--clay-deep)}
+.signup-btn .arr{transition:transform .18s}
+.signup-btn:hover .arr{transform:translateX(3px)}
 .signup-note{font-family:var(--mono);font-size:11.5px;letter-spacing:0.04em;color:oklch(0.82 0.03 60);margin-top:16px}
 
 /* ---------- inner content pages ---------- */
