@@ -5,8 +5,7 @@
     </p>
     <p class="meta">
       <a href="mailto:{{ .Site.Params.contactEmail }}">Contact</a>
-      · <a href="/authors/">Authors &amp; policy</a>
-      · <a href="/news/">News &amp; press</a>
+      {{ if not .Site.Params.comingSoon }} · <a href="/authors/">Authors &amp; policy</a> · <a href="/news/">News &amp; press</a>{{ end }}
     </p>
     <p class="meta tiny">&copy; {{ now.Year }} Scientists' Warning to Humanity on Genetic Diversity Loss. CC BY 4.0 where applicable.</p>
   </div>
