@@ -6,7 +6,7 @@ enableEmoji = false
 [params]
   description = "A consensus paper warning of the loss of genetic diversity across the tree of life."
   coordinator = "Moisés Expósito-Alonso"
-  coordinatorAffil = "UC Berkeley · HHMI"
+  coordinatorAffil = "University of California, Berkeley, Howard Hughes Medical Institute, and Innovative Genomics Institute"
   contactEmail = "moisesexpositoalonso@gmail.com"
 
   # --- Pre-release gate ---------------------------------------------------
