@@ -17,8 +17,9 @@ enableEmoji = false
   # `release` branch into the live one) and redeploy.
   comingSoon = true
   releaseDate = "June 28, 2026"
-  releaseVenue = "SMPE 2026"   # TODO: confirm acronym/venue name
-  releaseContext = "to coincide with the plenary talk at"
+  # Paste the Google Form share link here to wire the sign-up button.
+  # While empty, the button falls back to a mailto to the contact address.
+  signupFormURL = ""
 
 [markup]
   [markup.goldmark.renderer]

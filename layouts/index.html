@@ -12,6 +12,10 @@
   <p class="release-line">
     The full warning will be released on <strong>{{ .Site.Params.releaseDate }}</strong>.
   </p>
+  <p class="release-cta">
+    <a class="cta" href="{{ with .Site.Params.signupFormURL }}{{ . }}{{ else }}mailto:{{ $.Site.Params.contactEmail }}?subject=Sign%20me%20up%20%E2%80%94%20Genetic%20Diversity%20Warning{{ end }}"{{ with .Site.Params.signupFormURL }} target="_blank" rel="noopener"{{ end }}>Sign up for updates</a>
+    <span class="release-cta-note">Be notified when the warning is released.</span>
+  </p>
   <p class="release-contact">
     For inquiries, contact
     <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.coordinator }}</a>
@@ -29,6 +33,7 @@
   <div class="cta-row">
     <a class="cta" href="/documents/">Read the documents</a>
     <a class="cta cta-secondary" href="/authors/">Authorship policy</a>
+    {{ with .Site.Params.signupFormURL }}<a class="cta cta-secondary" href="{{ . }}" target="_blank" rel="noopener">Sign up for updates</a>{{ end }}
   </div>
 </section>
 
