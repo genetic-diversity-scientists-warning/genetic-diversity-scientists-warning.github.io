@@ -11,10 +11,6 @@ as they become available.
 
 <ul class="doc-list">
   <li>
-    <a href="https://docs.google.com/document/d/1vXMNGQnwwwzMlpUisLedVgXuGPZPyJyyssDPITOpZJI/edit" rel="noopener">Main manuscript draft (Google Doc)</a>
-    <span class="doc-meta">Working draft of the consensus paper. Access limited to listed co-authors.</span>
-  </li>
-  <li>
     <a href="https://docs.google.com/document/d/1tyyJp58KxZr4ibMop8H4pkDMzeV_SUw8tXV2EUm-4Z8/edit" rel="noopener">Synopsis (Google Doc)</a>
     <span class="doc-meta">Short, public-facing summary for the editor and for outreach.</span>
   </li>
