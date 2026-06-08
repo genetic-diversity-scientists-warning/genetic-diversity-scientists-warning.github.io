@@ -15,7 +15,7 @@ as they become available.
     <span class="doc-meta">Short, public-facing summary for the editor and for outreach.</span>
   </li>
   <li>
-    <a href="#" rel="noopener">Author sign-up form</a>
+    <a href="/#updates">Signatory Author sign-up form</a>
     <span class="doc-meta">Add your name, affiliation, ORCID, and contribution(s).</span>
   </li>
 </ul>
