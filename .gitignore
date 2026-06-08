@@ -6,3 +6,6 @@ resources/
 
 # stray scratch images dropped in the website root
 /ChatGPT Image*.png
+
+# imported Claude design archive (reference only)
+/claude-design/

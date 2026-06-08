@@ -1,10 +1,10 @@
 ---
 title: "Project site launched"
 date: 2026-05-13
-summary: "A public-facing site is now live for the Scientists' Warning on Genetic Diversity Loss — with documents, authorship policy, and a press section."
+summary: "A public-facing site is now live for the Scientists Warning to Humanity on Genetic Diversity Loss — with documents, authorship policy, and a press section."
 ---
 
-We are launching a small public site for the *Scientists' Warning to Humanity
+We are launching a small public site for the *Scientists Warning to Humanity
 on Genetic Diversity Loss* consensus paper.
 
 The site collects:

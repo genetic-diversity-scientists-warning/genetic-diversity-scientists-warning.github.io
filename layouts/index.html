@@ -1,64 +1,109 @@
 {{ define "main" }}
+{{ $signup := .Site.Params.signupFormURL }}
+{{ $signupHref := cond (ne $signup "") $signup (printf "mailto:%s?subject=Sign%%20me%%20up%%20%%E2%%80%%94%%20Genetic%%20Diversity%%20Warning" .Site.Params.contactEmail) }}
+
 {{ if .Site.Params.comingSoon }}
-<section class="coming-soon">
-  <p class="eyebrow">A consensus paper on genetic diversity loss</p>
-  <h1>A scientists' warning to humanity on the loss of genetic diversity.</h1>
-  <p class="lede">
-    The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes,
-    and humans alike. A distributed group of scientists is assembling the evidence and the policy
-    levers, using a Delphi-style consensus.
-  </p>
-  <p class="release-badge">Upcoming</p>
-  <p class="release-line">
-    The warning website launches <strong>{{ .Site.Params.releaseDate }}</strong>.
-    The full results and consensus paper will follow in the coming months.
-  </p>
-  <p class="release-cta">
-    <a class="cta" href="{{ with .Site.Params.signupFormURL }}{{ . }}{{ else }}mailto:{{ $.Site.Params.contactEmail }}?subject=Sign%20me%20up%20%E2%80%94%20Genetic%20Diversity%20Warning{{ end }}"{{ with .Site.Params.signupFormURL }} target="_blank" rel="noopener"{{ end }}>Sign up for updates</a>
-    <span class="release-cta-note">Be notified when the warning is released.</span>
-  </p>
-  <p class="release-contact">
-    For inquiries, contact
-    <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.coordinator }}</a>
-    ({{ .Site.Params.coordinatorAffil }}).
-  </p>
-</section>
+<!-- ===================== PRE-RELEASE SPLASH ===================== -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">A Consensus Paper on Genetic Diversity Loss</p>
+      <h1 class="grad" id="gradPhrase">A scientists warning to humanity on the loss of genetic diversity</h1>
+      <p class="lede">The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes, and humans alike. A distributed group of scientists is assembling the evidence and the policy levers, using a Delphi-style consensus.</p>
+      <p class="badge">Upcoming</p>
+      <p class="release-line">The warning website launches <strong>{{ .Site.Params.releaseDate }}</strong>. The full results and consensus paper will follow in the coming months.</p>
+      <div class="cta">
+        <a href="{{ $signupHref }}"{{ if ne $signup "" }} target="_blank" rel="noopener"{{ end }} class="btn btn-primary">Sign up for updates <span class="arr">→</span></a>
+        <span class="cta-note">Be notified when the warning is released.</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="/img/warning-dna-icon.png" alt="A red warning triangle containing a DNA double helix breaking apart at its base">
+    </div>
+  </div>
+</div>
+
 {{ else }}
-<section class="hero">
-  <p class="eyebrow">A consensus paper on genetic diversity loss</p>
-  <h1>A scientists' warning to humanity on the loss of genetic diversity.</h1>
-  <p class="lede">
-    The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes, and humans alike.
-    A distributed group of scientists is assembling the evidence and the policy levers, using a Delphi-style consensus.
-  </p>
-  <div class="cta-row">
-    <a class="cta" href="/documents/">Read the documents</a>
-    <a class="cta cta-secondary" href="/authors/">Authorship policy</a>
-    {{ with .Site.Params.signupFormURL }}<a class="cta cta-secondary" href="{{ . }}" target="_blank" rel="noopener">Sign up for updates</a>{{ end }}
+<!-- ===================== HERO ===================== -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">A Consensus Paper on Genetic Diversity Loss</p>
+      <h1 class="grad" id="gradPhrase">A scientists warning to humanity on the loss of genetic diversity</h1>
+      <p class="lede">The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes, and humans alike. A distributed group of scientists is assembling the evidence and the policy levers, using a Delphi-style consensus.</p>
+      <div class="cta">
+        <a href="/documents/" class="btn btn-primary">Read the documents <span class="arr">→</span></a>
+        <a href="/authors/" class="btn btn-ghost">Authorship policy</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="/img/warning-dna-icon.png" alt="A red warning triangle containing a DNA double helix breaking apart at its base">
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CONSENSUS PROSE ===================== -->
+<section class="consensus" id="consensus">
+  <div class="wrap">
+    <div class="inner reveal">
+      <span class="eyebrow">The consensus</span>
+      {{ .Content }}
+    </div>
   </div>
 </section>
 
-<section class="prose">
-  {{ .Content }}
+<!-- ===================== SECTIONS ===================== -->
+<section class="sections">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Explore the project.</h2>
+      <span class="note">More sections are added as the consensus develops.</span>
+    </div>
+    <div class="cards reveal">
+      <a class="scard" href="/documents/">
+        <div class="num">01</div>
+        <h3>Documents</h3>
+        <p>The synopsis and live manuscript for co-authors and signatories.</p>
+        <span class="ar">Open →</span>
+      </a>
+      <a class="scard" href="/authors/">
+        <div class="num">02</div>
+        <h3>Authors &amp; policy</h3>
+        <p>Who is contributing, how authorship is assigned, and how to join.</p>
+        <span class="ar">Open →</span>
+      </a>
+      <a class="scard" href="/news/">
+        <div class="num">03</div>
+        <h3>News &amp; press</h3>
+        <p>Press releases, media coverage, and announcements.</p>
+        <span class="ar">Open →</span>
+      </a>
+      <a class="scard" href="/about/">
+        <div class="num">04</div>
+        <h3>Why a consensus paper</h3>
+        <p>The Delphi consensus method behind the warning.</p>
+        <span class="ar">Open →</span>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="card-grid">
-  <a class="card" href="/documents/">
-    <h3>Documents</h3>
-    <p>The live manuscript, synopsis, and Google Doc links.</p>
-  </a>
-  <a class="card" href="/authors/">
-    <h3>Authors &amp; policy</h3>
-    <p>Who is contributing, how authorship is assigned, and how to join.</p>
-  </a>
-  <a class="card" href="/news/">
-    <h3>News &amp; press</h3>
-    <p>Press releases, media coverage, and announcements.</p>
-  </a>
-  <a class="card" href="/about/">
-    <h3>Why a consensus paper</h3>
-    <p>The Delphi consensus method behind the warning.</p>
-  </a>
+<!-- ===================== UPDATES ===================== -->
+<section class="updates" id="updates">
+  <div class="wrap inner">
+    <div class="reveal">
+      <span class="eyebrow">Stay in the loop</span>
+      <h2>Get updates as the consensus develops.</h2>
+    </div>
+    <div class="reveal">
+      <p class="sub">A short newsletter for the community — new documents, milestones, and ways to contribute as a co-author or signatory. A few emails a year, nothing more.</p>
+      <form class="signup-form" id="signupForm" data-form-url="{{ $signup }}" data-contact="{{ .Site.Params.contactEmail }}">
+        <input type="email" placeholder="you@institution.edu" aria-label="Email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="signup-note" id="signupNote">For scientists, press, and anyone following the warning.</div>
+    </div>
+  </div>
 </section>
 {{ end }}
 {{ end }}

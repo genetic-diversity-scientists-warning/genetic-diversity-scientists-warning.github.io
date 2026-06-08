@@ -1,12 +1,30 @@
-<footer class="site-footer">
-  <div class="container">
-    <p>
-      Coordinated by <strong>{{ .Site.Params.coordinator }}</strong> · {{ .Site.Params.coordinatorAffil }}
-    </p>
-    <p class="meta">
-      <a href="mailto:{{ .Site.Params.contactEmail }}">Contact</a>
-      {{ if not .Site.Params.comingSoon }} · <a href="/authors/">Authors &amp; policy</a> · <a href="/news/">News &amp; press</a>{{ end }}
-    </p>
-    <p class="meta tiny">&copy; {{ now.Year }} Scientists' Warning to Humanity on Genetic Diversity Loss. CC BY 4.0 where applicable.</p>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="b" href="/">
+        <svg width="34" height="34" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <path d="M60 16 L104 98 L16 98 Z" stroke="var(--clay-bright)" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M60 34 C49 40 49 47 60 53 C71 59 71 66 60 72" stroke="oklch(0.85 0.01 84)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M60 34 C71 40 71 47 60 53 C49 59 49 66 60 72" stroke="oklch(0.85 0.01 84)" stroke-width="2.4" stroke-linecap="round"/>
+          <g stroke-linecap="round" stroke-width="2.4">
+            <line x1="52" y1="40" x2="68" y2="40" stroke="var(--clay-bright)"/><line x1="55" y1="48" x2="65" y2="48" stroke="oklch(0.85 0.01 84)"/>
+            <line x1="55" y1="58" x2="65" y2="58" stroke="oklch(0.55 0.01 84)"/><line x1="52" y1="66" x2="68" y2="66" stroke="oklch(0.55 0.01 84)"/>
+          </g>
+        </svg>
+        <span class="t">Genetic Diversity Warning<small>Scientists Warning to Humanity</small></span>
+      </a>
+      <div class="links">
+        {{ if not .Site.Params.comingSoon }}
+        <a href="/documents/">Documents</a>
+        <a href="/authors/">Authors &amp; policy</a>
+        <a href="/news/">News &amp; press</a>
+        {{ end }}
+        <a href="mailto:{{ .Site.Params.contactEmail }}">Contact</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span class="coord">Led by <b>{{ .Site.Params.coordinator }}</b> · {{ .Site.Params.coordinatorAffil }}</span>
+      <span>&copy; {{ now.Year }} · CC BY 4.0 where applicable</span>
+    </div>
   </div>
 </footer>
