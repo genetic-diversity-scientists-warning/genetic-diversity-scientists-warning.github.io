@@ -19,6 +19,10 @@
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
 
+  {{ if and (ne .Site.Params.signupFormAction "") (ne .Site.Params.signupEmailEntry "") }}
+  <iframe name="gform_sink" title="signup" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;border:0"></iframe>
+  {{ end }}
+
   <script>
   // scroll-reveal
   (function(){
@@ -45,21 +49,6 @@
       sp.textContent=ch;
       sp.style.color='oklch('+L.toFixed(3)+' '+C.toFixed(3)+' '+H.toFixed(1)+')';
       el.appendChild(sp);k++;
-    });
-  })();
-
-  // newsletter form -> open the configured sign-up form (or mailto fallback)
-  (function(){
-    var f=document.getElementById('signupForm');
-    if(!f)return;
-    f.addEventListener('submit',function(e){
-      e.preventDefault();
-      var url=f.getAttribute('data-form-url')||'';
-      var contact=f.getAttribute('data-contact')||'';
-      var email=(f.querySelector('input[type=email]')||{}).value||'';
-      var note=document.getElementById('signupNote');
-      if(url){ window.open(url,'_blank','noopener'); if(note)note.textContent='Opening the sign-up form…'; }
-      else if(contact){ window.location.href='mailto:'+contact+'?subject='+encodeURIComponent('Sign me up — Genetic Diversity Warning')+'&body='+encodeURIComponent(email); }
     });
   })();
   </script>

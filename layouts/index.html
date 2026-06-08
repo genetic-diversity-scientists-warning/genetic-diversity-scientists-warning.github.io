@@ -1,7 +1,4 @@
 {{ define "main" }}
-{{ $signup := .Site.Params.signupFormURL }}
-{{ $signupHref := cond (ne $signup "") $signup (printf "mailto:%s?subject=Sign%%20me%%20up%%20%%E2%%80%%94%%20Genetic%%20Diversity%%20Warning" .Site.Params.contactEmail) }}
-
 {{ if .Site.Params.comingSoon }}
 <!-- ===================== PRE-RELEASE SPLASH ===================== -->
 <div class="hero">
@@ -12,10 +9,10 @@
       <p class="lede">The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes, and humans alike. A distributed group of scientists is assembling the evidence and the policy levers, using a Delphi-style consensus.</p>
       <p class="badge">Upcoming</p>
       <p class="release-line">The warning website launches <strong>{{ .Site.Params.releaseDate }}</strong>. The full results and consensus paper will follow in the coming months.</p>
-      <div class="cta">
-        <a href="{{ $signupHref }}"{{ if ne $signup "" }} target="_blank" rel="noopener"{{ end }} class="btn btn-primary">Sign up for updates <span class="arr">→</span></a>
-        <span class="cta-note">Be notified when the warning is released.</span>
+      <div class="cta cta-signup">
+        {{ partial "signup.html" (dict "Site" .Site "variant" "light") }}
       </div>
+      <p class="cta-note">Get updates and calls to vote on consensus — just your email.</p>
     </div>
     <div class="hero-visual">
       <img src="/img/warning-dna-icon.png" alt="A red warning triangle containing a DNA double helix breaking apart at its base">
@@ -93,12 +90,12 @@
   <div class="wrap inner">
     <div class="reveal">
       <span class="eyebrow">Stay in the loop</span>
-      <h2>Get updates as the paper develops and vote on consensus.</h2>
+      <h2>Get updates and calls to vote on consensus.</h2>
     </div>
     <div class="reveal">
-      <p class="sub">A short newsletter for the community — new documents, milestones, and invitations to vote in our consensus polls. A few emails a year, nothing more.</p>
-      <a class="signup-btn" href="{{ $signupHref }}"{{ if ne $signup "" }} target="_blank" rel="noopener"{{ end }}>Subscribe <span class="arr">→</span></a>
-      <div class="signup-note">Opens our sign-up form — name, email, affiliation, and role. For scientists, press, and anyone following the warning.</div>
+      <p class="sub">A few emails a year — new documents, milestones, and calls to vote in our consensus polls.</p>
+      {{ partial "signup.html" (dict "Site" .Site "variant" "dark") }}
+      <div class="signup-note">Just your email — we ask for affiliation and role later, only when you vote.</div>
     </div>
   </div>
 </section>
