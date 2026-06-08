@@ -1,0 +1,49 @@
+baseURL = "https://scientistwarninggeneticdiversity.github.io/"
+languageCode = "en-us"
+title = "Scientists' Warning to Humanity on Genetic Diversity Loss"
+enableEmoji = false
+
+[params]
+  description = "A consensus paper warning of the loss of genetic diversity across the tree of life."
+  coordinator = "Moisés Expósito-Alonso"
+  coordinatorAffil = "UC Berkeley · HHMI"
+  contactEmail = "moisesexpositoalonso@gmail.com"
+
+  # --- Pre-release gate ---------------------------------------------------
+  # When true, the site renders ONLY a "coming soon" splash (nav hidden,
+  # noindex on every page). This flag is the ONLY difference between the
+  # `pre-release` branch (true, live now) and the `release` branch
+  # (false, full site). On launch day flip it to false (or merge the
+  # `release` branch into the live one) and redeploy.
+  comingSoon = false
+  releaseDate = "June 28, 2026"
+  releaseVenue = "SMPE 2026"   # TODO: confirm acronym/venue name
+  releaseContext = "to coincide with the plenary talk at"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[[menu.main]]
+  name = "The Warning"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "Documents"
+  url = "/documents/"
+  weight = 2
+[[menu.main]]
+  name = "Authors"
+  url = "/authors/"
+  weight = 3
+[[menu.main]]
+  name = "News & Press"
+  url = "/news/"
+  weight = 4
+[[menu.main]]
+  name = "Why a consensus paper"
+  url = "/about/"
+  weight = 5

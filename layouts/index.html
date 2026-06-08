@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ if .Site.Params.comingSoon }}
+<section class="coming-soon">
+  <p class="eyebrow">A consensus paper on genetic diversity loss</p>
+  <h1>A scientists' warning to humanity on the loss of genetic diversity.</h1>
+  <p class="lede">
+    The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes,
+    and humans alike. A distributed group of scientists is assembling the evidence and the policy
+    levers, using a Delphi-style consensus.
+  </p>
+  <p class="release-badge">Upcoming</p>
+  <p class="release-line">
+    The full warning will be released on <strong>{{ .Site.Params.releaseDate }}</strong>,
+    {{ .Site.Params.releaseContext }} <strong>{{ .Site.Params.releaseVenue }}</strong>.
+  </p>
+  <p class="release-contact">
+    For inquiries, contact
+    <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.coordinator }}</a>
+    ({{ .Site.Params.coordinatorAffil }}).
+  </p>
+</section>
+{{ else }}
+<section class="hero">
+  <p class="eyebrow">A consensus paper on genetic diversity loss</p>
+  <h1>A scientists' warning to humanity on the loss of genetic diversity.</h1>
+  <p class="lede">
+    The genetic variation that sustains life on Earth is eroding — across crops, wildlife, microbes, and humans alike.
+    A distributed group of scientists is assembling the evidence and the policy levers, using a Delphi-style consensus.
+  </p>
+  <div class="cta-row">
+    <a class="cta" href="/documents/">Read the documents</a>
+    <a class="cta cta-secondary" href="/authors/">Authorship policy</a>
+  </div>
+</section>
+
+<section class="prose">
+  {{ .Content }}
+</section>
+
+<section class="card-grid">
+  <a class="card" href="/documents/">
+    <h3>Documents</h3>
+    <p>The live manuscript, synopsis, and Google Doc links.</p>
+  </a>
+  <a class="card" href="/authors/">
+    <h3>Authors &amp; policy</h3>
+    <p>Who is contributing, how authorship is assigned, and how to join.</p>
+  </a>
+  <a class="card" href="/news/">
+    <h3>News &amp; press</h3>
+    <p>Press releases, media coverage, and announcements.</p>
+  </a>
+  <a class="card" href="/about/">
+    <h3>Why a consensus paper</h3>
+    <p>The Delphi consensus method behind the warning.</p>
+  </a>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,8 @@
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+*.log
+
+# stray scratch images dropped in the website root
+/ChatGPT Image*.png
