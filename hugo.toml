@@ -15,7 +15,7 @@ enableEmoji = false
   # `pre-release` branch (true, live now) and the `release` branch
   # (false, full site). On launch day flip it to false (or merge the
   # `release` branch into the live one) and redeploy.
-  comingSoon = true
+  comingSoon = false
   releaseDate = "June 28, 2026"
   releaseVenue = "SMPE 2026"   # TODO: confirm acronym/venue name
   releaseContext = "to coincide with the plenary talk at"
