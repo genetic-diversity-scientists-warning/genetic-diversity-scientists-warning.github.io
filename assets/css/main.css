@@ -168,6 +168,18 @@ main.container { padding-top: 3rem; padding-bottom: 4rem; }
   padding: 0.85rem 1.1rem;
   margin: 0 0 1.75rem;
 }
+.release-cta {
+  margin: 0 0 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+.release-cta-note {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+}
 .release-contact {
   font-family: var(--sans);
   font-size: 0.95rem;
