@@ -6,7 +6,7 @@ enableEmoji = false
 [params]
   description = "A consensus paper warning of the loss of genetic diversity across the tree of life."
   coordinator = "Moisés Expósito-Alonso"
-  coordinatorAffil = "UC Berkeley · HHMI"
+  coordinatorAffil = "University of California, Berkeley, Howard Hughes Medical Institute, and Innovative Genomics Institute"
   contactEmail = "moisesexpositoalonso@gmail.com"
 
   # --- Pre-release gate ---------------------------------------------------
@@ -15,7 +15,7 @@ enableEmoji = false
   # `pre-release` branch (true, live now) and the `release` branch
   # (false, full site). On launch day flip it to false (or merge the
   # `release` branch into the live one) and redeploy.
-  comingSoon = false
+  comingSoon = true
   releaseDate = "June 28, 2026"
   releaseVenue = "SMPE 2026"   # TODO: confirm acronym/venue name
   releaseContext = "to coincide with the plenary talk at"
