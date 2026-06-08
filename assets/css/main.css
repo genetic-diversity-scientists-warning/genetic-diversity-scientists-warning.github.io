@@ -113,6 +113,16 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 .signup-btn:hover{background:#fff;color:var(--clay-deep)}
 .signup-btn .arr{transition:transform .18s}
 .signup-btn:hover .arr{transform:translateX(3px)}
+/* light variant (paper background — pre-release splash) */
+.cta-signup{margin-top:34px;margin-bottom:10px}
+.signup-btn.light{margin-top:0;background:var(--clay);color:var(--paper)}
+.signup-btn.light:hover{background:var(--clay-deep);color:var(--paper)}
+.signup-form.light{margin-top:0}
+.signup-form.light input{border-color:var(--line);background:#fff;color:var(--ink)}
+.signup-form.light input::placeholder{color:var(--ink-faint)}
+.signup-form.light input:focus{border-color:var(--clay)}
+.signup-form.light button{background:var(--clay);color:var(--paper)}
+.signup-form.light button:hover{background:var(--clay-deep)}
 .signup-note{font-family:var(--mono);font-size:11.5px;letter-spacing:0.04em;color:oklch(0.82 0.03 60);margin-top:16px}
 
 /* ---------- inner content pages ---------- */
