@@ -46,14 +46,3 @@ as they become available.
     <span class="doc-meta">Cleaned datasets and Google Colab notebooks used to generate the figures.</span>
   </li>
 </ul>
-
-## Previous scientists' warnings (precedents)
-
-This effort follows a tradition of consensus "scientists' warnings" in specific
-domains. We model our process on:
-
-- *Scientists' warning on climate change* (Ripple et al., 2017; 2019; 2021)
-- *Scientists' warning to humanity on microorganisms and climate change* (2019)
-- *Scientists' warning on global health* and similar domain-specific consensus pieces
-
-> Citing a previous warning here? Add it to `content/documents.md`.
