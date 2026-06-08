@@ -19,7 +19,7 @@ enableEmoji = false
   releaseDate = "June 28, 2026"
   # Paste the Google Form share link here to wire the sign-up button.
   # While empty, the button falls back to a mailto to the contact address.
-  signupFormURL = ""
+  signupFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdbDp4cRNUvIOmTdWLBM5VLuVRAPGyp-9NKGAYnpcUAppgiSg/viewform"
 
 [markup]
   [markup.goldmark.renderer]
