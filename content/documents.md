@@ -11,16 +11,12 @@ as they become available.
 
 <ul class="doc-list">
   <li>
-    <a href="#" rel="noopener">Main manuscript draft (Google Doc)</a>
-    <span class="doc-meta">Working draft of the consensus paper. Editable by listed co-authors.</span>
+    <a href="https://docs.google.com/document/d/1vXMNGQnwwwzMlpUisLedVgXuGPZPyJyyssDPITOpZJI/edit" rel="noopener">Main manuscript draft (Google Doc)</a>
+    <span class="doc-meta">Working draft of the consensus paper. Access limited to listed co-authors.</span>
   </li>
   <li>
-    <a href="#" rel="noopener">Synopsis (Google Doc)</a>
-    <span class="doc-meta">Short summary intended for the editor and for outreach.</span>
-  </li>
-  <li>
-    <a href="#" rel="noopener">Figure list (Google Doc)</a>
-    <span class="doc-meta">Planned figures with owners. Each figure has a matching Colab notebook.</span>
+    <a href="https://docs.google.com/document/d/1tyyJp58KxZr4ibMop8H4pkDMzeV_SUw8tXV2EUm-4Z8/edit" rel="noopener">Synopsis (Google Doc)</a>
+    <span class="doc-meta">Short, public-facing summary for the editor and for outreach.</span>
   </li>
   <li>
     <a href="#" rel="noopener">Author sign-up form</a>
@@ -28,7 +24,7 @@ as they become available.
   </li>
 </ul>
 
-<p class="meta"><em>Links above are placeholders. Replace the <code>href="#"</code> values in <code>content/documents.md</code> with the actual Google Doc URLs once shared.</em></p>
+<p class="meta"><em>Remaining <code>href="#"</code> links are placeholders — replace them in <code>content/documents.md</code> as those documents become available.</em></p>
 
 ## Supporting materials
 
@@ -36,13 +32,5 @@ as they become available.
   <li>
     <a href="#" rel="noopener">Delphi-method protocol</a>
     <span class="doc-meta">How the consensus rounds are organized and how disagreements are resolved.</span>
-  </li>
-  <li>
-    <a href="#" rel="noopener">Reference list / bibliography</a>
-    <span class="doc-meta">Sources cited by the manuscript. Maintained in Paperpile.</span>
-  </li>
-  <li>
-    <a href="#" rel="noopener">Data &amp; figure pipeline</a>
-    <span class="doc-meta">Cleaned datasets and Google Colab notebooks used to generate the figures.</span>
   </li>
 </ul>
