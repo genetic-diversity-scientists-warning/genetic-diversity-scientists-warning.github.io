@@ -1,6 +1,6 @@
 baseURL = "https://genetic-diversity-scientists-warning.github.io/"
 languageCode = "en-us"
-title = "Scientists' Warning to Humanity on Genetic Diversity Loss"
+title = "Scientists Warning to Humanity on Genetic Diversity Loss"
 enableEmoji = false
 
 [params]

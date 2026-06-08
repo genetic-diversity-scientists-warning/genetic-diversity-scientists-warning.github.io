@@ -7,15 +7,61 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   {{ if .Site.Params.comingSoon }}<meta name="robots" content="noindex, nofollow">
   {{ if not .IsHome }}<meta http-equiv="refresh" content="0; url={{ "/" | relURL }}">{{ end }}{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 </head>
 <body>
   {{ partial "header.html" . }}
-  <main class="container">
-    {{ block "main" . }}{{ end }}
-  </main>
+  {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
+
+  <script>
+  // scroll-reveal
+  (function(){
+    var els=document.querySelectorAll('.reveal:not(.in)');
+    if(!els.length)return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+    els.forEach(function(el){io.observe(el)});
+    requestAnimationFrame(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.92)el.classList.add('in')})});
+  })();
+
+  // per-letter black -> red gradient across the emphasis phrase
+  (function(){
+    var el=document.getElementById('gradPhrase');
+    if(!el)return;
+    var txt=el.textContent;
+    var letters=[].slice.call(txt).filter(function(c){return c!==' '}).length;
+    var s={L:0.255,C:0.014,H:28}, e={L:0.520,C:0.205,H:27};
+    var k=0;el.textContent='';
+    [].slice.call(txt).forEach(function(ch){
+      if(ch===' '){el.appendChild(document.createTextNode(' '));return;}
+      var t=letters>1?k/(letters-1):1;
+      var L=s.L+(e.L-s.L)*t, C=s.C+(e.C-s.C)*t, H=s.H+(e.H-s.H)*t;
+      var sp=document.createElement('span');
+      sp.textContent=ch;
+      sp.style.color='oklch('+L.toFixed(3)+' '+C.toFixed(3)+' '+H.toFixed(1)+')';
+      el.appendChild(sp);k++;
+    });
+  })();
+
+  // newsletter form -> open the configured sign-up form (or mailto fallback)
+  (function(){
+    var f=document.getElementById('signupForm');
+    if(!f)return;
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var url=f.getAttribute('data-form-url')||'';
+      var contact=f.getAttribute('data-contact')||'';
+      var email=(f.querySelector('input[type=email]')||{}).value||'';
+      var note=document.getElementById('signupNote');
+      if(url){ window.open(url,'_blank','noopener'); if(note)note.textContent='Opening the sign-up form…'; }
+      else if(contact){ window.location.href='mailto:'+contact+'?subject='+encodeURIComponent('Sign me up — Genetic Diversity Warning')+'&body='+encodeURIComponent(email); }
+    });
+  })();
+  </script>
 </body>
 </html>

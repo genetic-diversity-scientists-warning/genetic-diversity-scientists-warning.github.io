@@ -1,12 +1,18 @@
 {{ define "main" }}
-<article class="page prose">
-  <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
-    {{ if and (eq .Section "news") (not .Date.IsZero) }}
-      <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
-    {{ end }}
-  </header>
-  {{ .Content }}
+<article class="page">
+  <div class="wrap">
+    <div class="inner">
+      <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+        {{ if and (eq .Section "news") (not .Date.IsZero) }}
+          <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
+        {{ end }}
+      </header>
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
 </article>
 {{ end }}
