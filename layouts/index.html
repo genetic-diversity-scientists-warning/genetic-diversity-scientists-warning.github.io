@@ -86,18 +86,6 @@
 </section>
 
 <!-- ===================== UPDATES ===================== -->
-<section class="updates" id="updates">
-  <div class="wrap inner">
-    <div class="reveal">
-      <span class="eyebrow">Stay in the loop</span>
-      <h2>Get updates and calls to vote on consensus.</h2>
-    </div>
-    <div class="reveal">
-      <p class="sub">A few emails a year — new documents, milestones, and calls to vote in our consensus polls.</p>
-      {{ partial "signup.html" (dict "Site" .Site "variant" "dark") }}
-      <div class="signup-note">Just your email — we ask for affiliation and role later, only when you vote.</div>
-    </div>
-  </div>
-</section>
+{{ partial "updates.html" . }}
 {{ end }}
 {{ end }}

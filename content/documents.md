@@ -14,13 +14,7 @@ as they become available.
     <a href="https://docs.google.com/document/d/1tyyJp58KxZr4ibMop8H4pkDMzeV_SUw8tXV2EUm-4Z8/edit" rel="noopener">Synopsis (Google Doc)</a>
     <span class="doc-meta">Short, public-facing summary for the editor and for outreach.</span>
   </li>
-  <li>
-    <a href="/#updates">Signatory Author sign-up form</a>
-    <span class="doc-meta">Add your name, affiliation, ORCID, and contribution(s).</span>
-  </li>
 </ul>
-
-<p class="meta"><em>Remaining <code>href="#"</code> links are placeholders — replace them in <code>content/documents.md</code> as those documents become available.</em></p>
 
 ## Supporting materials
 
