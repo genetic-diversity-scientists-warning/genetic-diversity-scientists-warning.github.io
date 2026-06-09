@@ -27,8 +27,8 @@ enableEmoji = false
   # Alternative: a Google Form with a PLAIN (non-verified) short-answer email
   # question accepting anonymous responses. signupFormAction = its /formResponse
   # URL; signupEmailEntry = the email field name, e.g. "entry.123456789".
-  signupFormAction = ""
-  signupEmailEntry = ""
+  signupFormAction = "https://docs.google.com/forms/d/e/1FAIpQLSdbDp4cRNUvIOmTdWLBM5VLuVRAPGyp-9NKGAYnpcUAppgiSg/formResponse"
+  signupEmailEntry = "entry.566969175"
 
 [markup]
   [markup.goldmark.renderer]
