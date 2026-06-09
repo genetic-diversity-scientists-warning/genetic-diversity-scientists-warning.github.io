@@ -19,11 +19,14 @@ enableEmoji = false
   releaseDate = "June 28, 2026"
   # Fallback "Subscribe" button target (opens the Google Form in a new tab).
   signupFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdbDp4cRNUvIOmTdWLBM5VLuVRAPGyp-9NKGAYnpcUAppgiSg/viewform"
-  # Inline email capture (no redirect). Requires a Google Form with a PLAIN
-  # (non-verified) short-answer email question accepting anonymous responses:
-  #   signupFormAction = that form's .../formResponse URL
-  #   signupEmailEntry = the email question's field name, e.g. "entry.123456789"
-  # When both are set, the page renders an inline email box instead of the button.
+  # --- Inline email capture (no redirect, no popup) ---
+  # Preferred: Web3Forms. Create a free access key at https://web3forms.com
+  # (enter your email -> copy the key). The key is PUBLIC by design. Submissions
+  # are emailed to that key's address; from there you add people to the Group.
+  signupWeb3Key = ""
+  # Alternative: a Google Form with a PLAIN (non-verified) short-answer email
+  # question accepting anonymous responses. signupFormAction = its /formResponse
+  # URL; signupEmailEntry = the email field name, e.g. "entry.123456789".
   signupFormAction = ""
   signupEmailEntry = ""
 

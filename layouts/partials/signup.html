@@ -1,15 +1,24 @@
 {{- /* Reusable sign-up control. Pass: (dict "Site" .Site "variant" "light|dark")
-       - inline email form when signupFormAction + signupEmailEntry are set
-       - else a "Subscribe" button that opens signupFormURL
-       - else a mailto fallback */ -}}
+       Priority: Web3Forms inline -> Google Form inline -> button -> mailto.
+       All inline modes submit without a redirect or popup. */ -}}
+{{- $w3 := .Site.Params.signupWeb3Key -}}
 {{- $action := .Site.Params.signupFormAction -}}
 {{- $entry := .Site.Params.signupEmailEntry -}}
 {{- $formurl := .Site.Params.signupFormURL -}}
 {{- $contact := .Site.Params.contactEmail -}}
 {{- $v := .variant | default "dark" -}}
-{{- if and (ne $action "") (ne $entry "") -}}
+{{- if ne $w3 "" -}}
+<form class="signup-form {{ $v }}" data-mode="web3forms" action="https://api.web3forms.com/submit" method="post">
+  <input type="hidden" name="access_key" value="{{ $w3 }}">
+  <input type="hidden" name="subject" value="New signup — Genetic Diversity Warning">
+  <input type="hidden" name="from_name" value="Genetic Diversity Warning site">
+  <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+  <button type="submit">Subscribe</button>
+</form>
+{{- else if and (ne $action "") (ne $entry "") -}}
 <form class="signup-form {{ $v }}" action="{{ $action }}" method="post" target="gform_sink"
-      onsubmit="var n=this.parentNode.querySelector('.signup-note');if(n)n.textContent='Thanks — you’re on the list.';this.querySelector('button').textContent='Subscribed';">
+      onsubmit="var n=this.parentNode.querySelector('.signup-note,.cta-note');if(n)n.textContent='Thanks — you’re on the list.';this.querySelector('button').textContent='Subscribed';">
   <input type="email" name="{{ $entry }}" placeholder="you@email.com" aria-label="Email address" required>
   <button type="submit">Subscribe</button>
 </form>
