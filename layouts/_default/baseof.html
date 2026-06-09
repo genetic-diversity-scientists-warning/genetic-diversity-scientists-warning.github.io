@@ -51,6 +51,31 @@
       el.appendChild(sp);k++;
     });
   })();
+
+  // Web3Forms inline submit — AJAX, no redirect/popup, inline confirmation
+  (function(){
+    document.querySelectorAll('form.signup-form[data-mode="web3forms"]').forEach(function(f){
+      f.addEventListener('submit', function(e){
+        e.preventDefault();
+        var btn=f.querySelector('button'), orig=btn.textContent;
+        var note=f.parentNode.querySelector('.signup-note, .cta-note');
+        btn.disabled=true; btn.textContent='…';
+        var data=Object.fromEntries(new FormData(f).entries());
+        fetch('https://api.web3forms.com/submit',{method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify(data)})
+          .then(function(r){return r.json()})
+          .then(function(j){
+            if(j.success){ f.reset(); btn.textContent='Subscribed ✓';
+              if(note)note.textContent='Thanks — you’re on the list.'; }
+            else { btn.disabled=false; btn.textContent=orig;
+              if(note)note.textContent='Hmm, that didn’t go through — please try again.'; }
+          })
+          .catch(function(){ btn.disabled=false; btn.textContent=orig;
+            if(note)note.textContent='Network error — please try again.'; });
+      });
+    });
+  })();
   </script>
 </body>
 </html>
