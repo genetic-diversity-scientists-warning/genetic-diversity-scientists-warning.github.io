@@ -43,9 +43,7 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 .nav-cta:hover{background:var(--clay-deep)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
-  background-image:radial-gradient(circle, oklch(0.52 0.20 27 / 0.13) 1.4px, transparent 1.6px),radial-gradient(circle, oklch(0.255 0.012 70 / 0.07) 1.4px, transparent 1.6px);
-  background-size:42px 42px,70px 70px;background-position:0 0,20px 26px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.06fr 0.94fr;gap:40px;align-items:center;padding:78px 0 84px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px;padding:54px 0 60px}}
 .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.2vw,68px);line-height:1.04;letter-spacing:-0.02em;max-width:15ch;margin:24px 0 0}
