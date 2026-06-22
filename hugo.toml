@@ -16,7 +16,7 @@ enableEmoji = false
   # (false, full site). On launch day flip it to false (or merge the
   # `release` branch into the live one) and redeploy.
   comingSoon = true
-  releaseDate = "June 28, 2026"
+  releaseDate = "July 2, 2026"
   # Fallback "Subscribe" button target (opens the Google Form in a new tab).
   signupFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdbDp4cRNUvIOmTdWLBM5VLuVRAPGyp-9NKGAYnpcUAppgiSg/viewform"
   # --- Inline email capture (no redirect, no popup) ---
