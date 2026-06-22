@@ -16,6 +16,10 @@
 </head>
 <body>
   {{ partial "header.html" . }}
+  <a class="corner-qr" href="/" aria-label="Scan to open or share this website">
+    <img src="/img/qr-website.png" width="72" height="72" alt="QR code linking to this website">
+    <span>Scan to share</span>
+  </a>
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
 

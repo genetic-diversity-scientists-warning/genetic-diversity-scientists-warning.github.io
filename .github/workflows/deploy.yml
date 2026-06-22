@@ -3,7 +3,7 @@
 # ───────────────────────────────────────────────────────────────────────
 #  LIVE BRANCH:  pre-release   (the public "coming soon" splash)
 #
-#  TO LAUNCH THE FULL SITE on June 28, do ONE of:
+#  TO LAUNCH THE FULL SITE on July 2, do ONE of:
 #    (a) set `comingSoon = false` in hugo.toml on `pre-release`, push; or
 #    (b) change `pre-release` below to `release` and push.
 #  Option (b) is cleanest: develop the real site freely on `release`
