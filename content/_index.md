@@ -10,8 +10,9 @@ variation with population sizes, which are in sharp decline across plants and
 animals.
 
 This consensus paper brings together a distributed group of scientists to
-(i) document the global loss of genetic diversity across the tree of life,
-(ii) identify the drivers, and (iii) recommend specific, actionable policy
+(i) transparently document different streams of genetic data from several
+scientific and conservation communities of genetic diversity across the tree of
+life, (ii) identify the drivers, and (iii) recommend specific, actionable policy
 and research priorities.
 
 The paper is being built using a **Delphi-style consensus process** so that the
