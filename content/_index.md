@@ -10,9 +10,8 @@ variation with population sizes, which are in sharp decline across plants and
 animals.
 
 This consensus paper brings together a distributed group of scientists to
-(i) document different streams of data, (ii) establish the current consensus on
-data needs, signals of decline, and level of threat, and (iii) recommend
-specific, actionable policy and research priorities.
+(i) document different streams of data and (ii) establish the current consensus
+on data needs, signals of decline, and level of threat.
 
 The paper is being built using a **Delphi-style consensus process** so that the
 final positions reflect the considered judgment of a broad community, not the
