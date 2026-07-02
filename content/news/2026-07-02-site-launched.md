@@ -1,6 +1,6 @@
 ---
 title: "Project site launched"
-date: 2026-05-13
+date: 2026-07-02
 summary: "A public-facing site is now live for the Scientists Warning to Humanity on Genetic Diversity Loss — with documents, authorship policy, and a press section."
 ---
 

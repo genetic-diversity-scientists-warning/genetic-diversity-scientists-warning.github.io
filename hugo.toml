@@ -15,7 +15,7 @@ enableEmoji = false
   # `pre-release` branch (true, live now) and the `release` branch
   # (false, full site). On launch day flip it to false (or merge the
   # `release` branch into the live one) and redeploy.
-  comingSoon = true
+  comingSoon = false
   releaseDate = "July 2, 2026"
   # Fallback "Subscribe" button target (opens the Google Form in a new tab).
   signupFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdbDp4cRNUvIOmTdWLBM5VLuVRAPGyp-9NKGAYnpcUAppgiSg/viewform"
@@ -46,12 +46,12 @@ enableEmoji = false
   url = "/documents/"
   weight = 2
 [[menu.main]]
-  name = "Authors"
-  url = "/authors/"
-  weight = 3
-[[menu.main]]
   name = "News & Press"
   url = "/news/"
+  weight = 3
+[[menu.main]]
+  name = "Authors"
+  url = "/authors/"
   weight = 4
 [[menu.main]]
   name = "Why a consensus paper"

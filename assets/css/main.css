@@ -145,6 +145,28 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 .prose th,.prose td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
 .prose th{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-faint)}
 
+/* ---------- authorship diagram ---------- */
+.auth-diagram{margin:34px 0 42px;font-family:var(--sans)}
+.auth-entry{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:20px 22px;font-size:16px;line-height:1.5;color:var(--ink-soft)}
+.auth-entry .auth-kicker{display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.auth-entry a{color:var(--clay);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.auth-stack{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.auth-tier{display:flex;align-items:center;justify-content:space-between;gap:18px;border-radius:6px;padding:17px 22px;color:#fff}
+.auth-tier h4{font-family:var(--sans);font-weight:700;font-size:17px;margin:0;color:#fff}
+.auth-tier p{font-size:14.5px;line-height:1.45;margin:5px 0 0;opacity:0.92}
+.auth-tier-body{max-width:48ch}
+.auth-tier-tag{font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;background:rgba(255,255,255,0.17);padding:6px 11px;border-radius:4px}
+.auth-tier--lead{background:var(--clay-deep);margin:0 30px}
+.auth-tier--leadsec{background:#8a1414;margin:0 15px}
+.auth-tier--sec{background:var(--clay)}
+.auth-conn{font-family:var(--mono);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-faint);text-align:center;padding:11px 0}
+.auth-band{border-radius:6px;padding:17px 22px;border:1px solid var(--line);background:var(--card)}
+.auth-band h4{font-family:var(--sans);font-weight:700;font-size:17px;margin:0;color:var(--ink)}
+.auth-band p{font-size:14.5px;line-height:1.45;margin:6px 0 0;color:var(--ink-soft)}
+.auth-band--delphi{border-left:3px solid var(--ink-faint)}
+.auth-band--sign{border-left:3px solid var(--clay)}
+@media(max-width:560px){.auth-tier{flex-direction:column;align-items:flex-start;gap:9px}.auth-tier--lead,.auth-tier--leadsec,.auth-tier--sec{margin:0}}
+
 /* document link list */
 .doc-list{list-style:none;padding:0;margin:32px 0}
 .doc-list li{padding:22px 24px;border:1px solid var(--line);border-radius:6px;margin-bottom:14px;background:var(--card);transition:border-color .18s,transform .18s}

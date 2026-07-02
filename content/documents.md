@@ -4,8 +4,8 @@ subtitle: "The live manuscript, synopsis, and supporting materials."
 ---
 
 The collaborative work happens in a shared Google Drive folder. Contributors
-with access can open the documents directly. Public previews will be linked here
-as they become available.
+with access can open the documents directly, where the precise schedule is also
+maintained. Public previews will be linked here as they become available.
 
 ## Core documents
 
@@ -20,7 +20,7 @@ as they become available.
 
 <ul class="doc-list">
   <li>
-    <a href="#" rel="noopener">Delphi-method protocol</a>
+    <a href="/authors/#the-delphi-consensus">Delphi-method protocol</a>
     <span class="doc-meta">How the consensus rounds are organized and how disagreements are resolved.</span>
   </li>
 </ul>
