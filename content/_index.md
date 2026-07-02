@@ -3,8 +3,7 @@ title: "The Warning"
 ---
 
 Genetic diversity is the raw material of evolution. It is what lets crops adapt
-to a hotter climate, lets wild populations recover from disease, lets microbes
-remain useful instead of becoming dangerous. It is being lost faster than we
+to a hotter climate and lets wild populations recover from disease. It is being lost faster than we
 can measure it — quietly, beneath the more visible losses of species and
 ecosystems.
 
