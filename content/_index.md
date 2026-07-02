@@ -10,10 +10,9 @@ variation with population sizes, which are in sharp decline across plants and
 animals.
 
 This consensus paper brings together a distributed group of scientists to
-(i) transparently document different streams of genetic data from several
-scientific and conservation communities of genetic diversity across the tree of
-life, (ii) identify the drivers, and (iii) recommend specific, actionable policy
-and research priorities.
+(i) document different streams of data, (ii) establish the current consensus on
+data needs, signals of decline, and level of threat, and (iii) recommend
+specific, actionable policy and research priorities.
 
 The paper is being built using a **Delphi-style consensus process** so that the
 final positions reflect the considered judgment of a broad community, not the
