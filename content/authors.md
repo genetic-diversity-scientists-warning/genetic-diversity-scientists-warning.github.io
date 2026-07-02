@@ -121,21 +121,6 @@ Research Tasks That Could be Attributed to
 Them*](https://doi.org/10.5281/zenodo.18421449) (Zenodo,
 [10.5281/zenodo.18421449](https://doi.org/10.5281/zenodo.18421449)).
 
-## Author order
-
-Among the named author team, order will be:
-
-1. **First &amp; corresponding author** — Moisés Expósito-Alonso (coordinator).
-2. **Section / figure leads** next, in **alphabetical order** by surname (noted
-   as equal contribution).
-3. **Other contributing authors** listed alphabetically, each with their CRediT
-   roles.
-
-The full author list is finalized after the last Delphi round and before
-submission. For authors of equivalent contribution, listing order is
-alphabetical (noted as such in the paper), to keep the process transparent and
-fair.
-
 ## Conflicts of interest
 
 Co-authors must declare any financial or non-financial conflicts of interest
