@@ -71,12 +71,37 @@
           .then(function(r){return r.json()})
           .then(function(j){
             if(j.success){ f.reset(); btn.textContent='Subscribed ✓';
-              if(note)note.textContent='Thanks — you’re on the list.'; }
+              if(note)note.textContent='Thanks — you’re on the list.';
+              window.signupToast&&window.signupToast(); }
             else { btn.disabled=false; btn.textContent=orig;
               if(note)note.textContent='Hmm, that didn’t go through — please try again.'; }
           })
           .catch(function(){ btn.disabled=false; btn.textContent=orig;
             if(note)note.textContent='Network error — please try again.'; });
+      });
+    });
+  })();
+
+  // Confirmation toast for the inline Google-Form sign-up (optimistic: fires on
+  // submit; the cross-origin POST to Google can't be read back by the browser).
+  (function(){
+    window.signupToast=function(email){
+      var t=document.createElement('div');
+      t.className='signup-toast';
+      t.innerHTML='<strong>✓ Thanks — you’re on the list'+(email?' ('+email+')':'')+'.</strong>';
+      document.body.appendChild(t);
+      requestAnimationFrame(function(){ t.classList.add('show'); });
+      setTimeout(function(){ t.classList.remove('show');
+        setTimeout(function(){ t.remove(); },400); }, 5000);
+    };
+    document.querySelectorAll('form.signup-form:not([data-mode])').forEach(function(f){
+      f.addEventListener('submit', function(){
+        var email=(f.querySelector('input[type=email]')||{}).value||'';
+        var btn=f.querySelector('button');
+        window.signupToast(email);
+        if(btn){ btn.textContent='Subscribed ✓'; }
+        // reset after the browser has already serialized the POST to the iframe
+        setTimeout(function(){ f.reset(); if(btn)btn.textContent='Subscribe'; }, 1600);
       });
     });
   })();

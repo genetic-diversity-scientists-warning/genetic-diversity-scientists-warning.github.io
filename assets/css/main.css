@@ -207,3 +207,17 @@ footer{background:var(--ink);color:oklch(0.74 0.01 84);padding:54px 0 46px;font-
 .corner-qr img{display:block;width:72px;height:72px}
 .corner-qr span{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint)}
 @media (max-width:640px){.corner-qr{display:none}}
+
+/* ---------- sign-up confirmation toast ---------- */
+.signup-toast{
+  position:fixed; left:50%; bottom:28px;
+  transform:translate(-50%,24px);
+  background:#1e4d2b; color:#fff;
+  padding:14px 22px; border-radius:12px;
+  font-size:15px; line-height:1.4; text-align:center;
+  max-width:90vw; box-shadow:0 10px 34px rgba(0,0,0,.28);
+  opacity:0; transition:opacity .35s ease, transform .35s ease;
+  z-index:9999;
+}
+.signup-toast.show{ opacity:1; transform:translate(-50%,0); }
+.signup-toast strong{ font-weight:700; }
