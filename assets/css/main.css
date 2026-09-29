@@ -144,6 +144,10 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 .prose table{width:100%;border-collapse:collapse;font-size:16px;margin:26px 0}
 .prose th,.prose td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
 .prose th{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-faint)}
+.prose img{max-width:100%;height:auto;display:block;border-radius:var(--r)}
+.prose figure{margin:32px 0}
+.prose figure img{border:1px solid var(--line)}
+.prose figcaption{font-family:var(--sans);font-size:14px;color:var(--ink-faint);margin-top:9px}
 
 /* ---------- authorship diagram ---------- */
 .auth-diagram{margin:34px 0 42px;font-family:var(--sans)}
@@ -177,11 +181,18 @@ header{position:sticky;top:0;z-index:40;background:oklch(0.972 0.008 84 / 0.88);
 /* post list (news) */
 .post-list{list-style:none;padding:0;margin:36px 0 0}
 .post-list li{padding:24px 0;border-top:1px solid var(--line)}
-.post-list a{display:block}
+.post-list .post-row{display:flex;align-items:center;gap:20px}
+.post-list .post-thumb{flex:none;width:104px;height:70px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.post-list .post-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.post-list .post-main{flex:1;min-width:0}
 .post-list .post-date{font-family:var(--mono);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;display:block}
-.post-list .post-title{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);transition:color .18s}
+.post-list .post-title{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);transition:color .18s;display:block}
 .post-list a:hover .post-title{color:var(--clay)}
-.post-list .post-summary{font-size:17px;color:var(--ink-soft);margin-top:8px}
+.post-list .post-summary{font-size:17px;color:var(--ink-soft);margin-top:8px;display:block}
+@media(max-width:560px){
+  .post-list .post-thumb{width:76px;height:52px}
+  .post-list .post-title{font-size:20px}
+}
 
 /* ---------- footer ---------- */
 footer{background:var(--ink);color:oklch(0.74 0.01 84);padding:54px 0 46px;font-family:var(--sans)}

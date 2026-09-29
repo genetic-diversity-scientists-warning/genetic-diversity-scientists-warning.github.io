@@ -2,6 +2,8 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 summary: "One-sentence summary that appears on the News & press index."
+# image: "/img/example-thumb.jpg"      # optional — small thumbnail shown on the News & press index
+# image_alt: "Describe the image"      # required if image is set
 ---
 
 Body of the press release / announcement goes here.
